@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MyAmbu</string>
+    <string name="st_ir_a_segunda_pantalla">Ir a Segunda Pantalla</string>
+    <string name="title_activity_segunda_pantalla">segunda_pantalla</string>
+    <string name="st_tipo_de_emergencia">Tipo de Emergencia</string>
+    <string name="st_numero_de_pacientes">Número de pacientes</string>
+    <string name="st_Eenviar_emergencia">Enviar</string>
 </resources>

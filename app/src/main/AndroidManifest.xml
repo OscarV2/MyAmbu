@@ -15,6 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".segunda_pantalla"
+            android:label="@string/title_activity_segunda_pantalla"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
