@@ -9,9 +9,9 @@ import android.widget.Button;
 
 
 public class primera_pantalla extends AppCompatActivity {
-
+boolean flag1 = true;
     private Button btn_ir_a_segunda;
-
+//HOLA MUNDO
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
