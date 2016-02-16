@@ -10,7 +10,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.oscar.myambu.segunda_pantalla"
-    tools:showIn="@layout/activity_segunda_pantalla">
+    tools:showIn="@layout/activity_segunda_pantalla"
+    android:id="@+id/segundo_layout">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/st_Eenviar_emergencia"
+        android:id="@+id/btn_Enviar"
+        android:background="@drawable/btn_circle"
+        android:textColor="#f7f1f1"
+        android:layout_below="@+id/radioGroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,43 +33,42 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <RadioButton
-        android:layout_width="wrap_content"
+    <RadioGroup
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="New RadioButton"
-        android:id="@+id/radioButton"
         android:layout_below="@+id/textView"
-        android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView"
-        android:layout_marginRight="152dp"
-        android:layout_marginEnd="152dp" />
+        android:layout_centerHorizontal="true"
+        android:id="@+id/radioGroup2">
 
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New RadioButton"
-        android:id="@+id/radioButton2"
-        android:layout_below="@+id/radioButton"
-        android:layout_alignRight="@+id/radioButton"
-        android:layout_alignEnd="@+id/radioButton" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/st_accidente"
+            android:id="@+id/rb_accidente"
+            android:checked="true" />
 
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New RadioButton"
-        android:id="@+id/radioButton3"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/st_cardio"
+            android:id="@+id/rb_cardio"
+            android:checked="false" />
 
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New RadioButton"
-        android:id="@+id/radioButton4"
-        android:layout_below="@+id/radioButton3"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quemaduras"
+            android:id="@+id/rbquemadura"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/st_otro"
+            android:id="@+id/rb_otro"
+            android:checked="false" />
+
+    </RadioGroup>
 
     <TextView
         android:layout_width="wrap_content"
@@ -65,55 +76,57 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/st_numero_de_pacientes"
         android:id="@+id/textView2"
-        android:layout_marginTop="101dp"
-        android:layout_below="@+id/radioButton2"
+        android:layout_below="@+id/radioGroup2"
         android:layout_centerHorizontal="true" />
 
-    <RadioButton
-        android:layout_width="wrap_content"
+    <RadioGroup
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="1"
-        android:id="@+id/radioButton5"
-        android:layout_alignTop="@+id/radioButton6"
-        android:layout_alignRight="@+id/radioButton7"
-        android:layout_alignEnd="@+id/radioButton7" />
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="3"
-        android:id="@+id/radioButton6"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/radioButton4"
-        android:layout_alignStart="@+id/radioButton4"
-        android:checked="false" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uno"
+            android:id="@+id/rb_Uno"
+            android:checked="true" />
 
-    <RadioButton
-        android:layout_width="wrap_content"
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/st_Dos"
+            android:id="@+id/rb_Dos"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/st_Tres"
+            android:id="@+id/rb_Tres"
+            android:checked="false" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="2"
-        android:id="@+id/radioButton7"
-        android:layout_below="@+id/radioButton5"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/btn_Enviar"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:checked="false" />
+        android:layout_marginTop="52dp" />
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="4"
-        android:id="@+id/radioButton8"
-        android:layout_below="@+id/radioButton6"
-        android:layout_alignLeft="@+id/radioButton6"
-        android:layout_alignStart="@+id/radioButton6"
-        android:checked="false" />
+        android:text="@string/st_Multiples"
+        android:id="@+id/rb_Multiples"
+        android:checked="false"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/st_Eenviar_emergencia"
-        android:id="@+id/button"
-        android:layout_below="@+id/radioButton8"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="53dp" />
 </RelativeLayout>

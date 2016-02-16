@@ -4,5 +4,16 @@
     <string name="title_activity_segunda_pantalla">segunda_pantalla</string>
     <string name="st_tipo_de_emergencia">Tipo de Emergencia</string>
     <string name="st_numero_de_pacientes">Número de pacientes</string>
-    <string name="st_Eenviar_emergencia">Enviar</string>
+    <string name="st_Eenviar_emergencia">Enviar Alerta?</string>
+    <string name="st_Uno">Uno</string>
+    <string name="st_Dos">Dos</string>
+    <string name="st_Tres">Tres</string>
+    <string name="st_Multiples">Multiples</string>
+    <string name="st_accidente">Accidente de tránsito</string>
+    <string name="st_cardio">Ataque cardiorespiratorio</string>
+    <string name="st_otro">Otro</string>
+    <string name="st_si">Si</string>
+    <string name="st_no">No</string>
+    <string name="title_activity_mi_ubicacion">Map</string>
+
 </resources>

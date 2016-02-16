@@ -9,6 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.oscar.myambu.primera_pantalla">
 
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,5 +18,5 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="147dp"
-        android:background="#c90c0c" />
+        android:background="@drawable/btn_circle" />
 </RelativeLayout>
