@@ -38,8 +38,8 @@ public class Mi_ubicacion extends AppCompatActivity implements LocationListener 
     GoogleMap mMap;
     //private Location location;
     //private int vista = 0;
-    double latitud;
-    double longitud;
+   // double latitud;
+  //  double longitud;
     private LocationManager locationManager;
     private LocationListener locationListener;
 Location loc;
@@ -47,12 +47,13 @@ Location loc;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mi_ubicacion);
-        mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap(); //
+        mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();   // Obtener referencia al fragment map
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);  //
-        mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN); //declarar tipo de mapa
-        mMap.setMyLocationEnabled(true);            //Habilitar mi posicion
+        mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);        //declarar tipo de mapa
+        mMap.setMyLocationEnabled(true);                    //Habilitar mi posicion
 
-        if (locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
+        //VERIFICANDO PERMISOS PARA GPS, UBICACION POR RED Y POR IP
+        if (locationManager.isProviderEnabled(LocationManager.PASSIVE_PROVIDER)) {
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 // TODO: Consider calling
                 //    ActivityCompat#requestPermissions
@@ -63,18 +64,18 @@ Location loc;
                 // for ActivityCompat#requestPermissions for more details.
                 return;
             }
-            loc = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+            loc = locationManager.getLastKnownLocation(LocationManager.PASSIVE_PROVIDER); // Obtener ultima ubicacion del Provider seleccionado
         }
 
-
+//Obteniendo latitud y longitud de mi ultima posicion
         LatLng miPosicion = new LatLng(loc.getLatitude(),loc.getLongitude());
+
 CameraPosition campos = new CameraPosition.Builder()
         .target(miPosicion)
         .zoom(16)
         .build();
 
 CameraUpdate cameraUpdate = CameraUpdateFactory.newCameraPosition(campos);
-
 mMap.animateCamera(cameraUpdate);
         mMap.addMarker(new MarkerOptions()
                 .position(miPosicion)
@@ -92,10 +93,6 @@ mMap.animateCamera(cameraUpdate);
 
 
 
-
-       // Location loc = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-       // latitud = loc.getLatitude();
-       // longitud= loc.getLongitude();
         locationListener = new LocationListener() {
 
 
@@ -135,7 +132,7 @@ mMap.animateCamera(cameraUpdate);
         };
     }
 
-
+//METODOS DE LocationListener
     @Override
     public void onLocationChanged(Location location) {
 

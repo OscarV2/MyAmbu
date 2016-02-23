@@ -11,7 +11,7 @@ import android.os.Bundle;
  * Created by oscar on 2/02/16.
  */
 public class DialogoEnviarAlerta extends android.support.v4.app.DialogFragment{
-    //@Override
+    @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 
         AlertDialog.Builder builder =

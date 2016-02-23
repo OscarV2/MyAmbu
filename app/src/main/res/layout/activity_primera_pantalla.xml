@@ -9,14 +9,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.oscar.myambu.primera_pantalla">
 
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/st_ir_a_segunda_pantalla"
         android:id="@+id/btn_ir_asegunda_pantalla"
         android:layout_alignParentBottom="true"
+        android:padding="20dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="147dp"
-        android:background="@drawable/btn_circle" />
+        android:background="@drawable/selector1"/>
 </RelativeLayout>

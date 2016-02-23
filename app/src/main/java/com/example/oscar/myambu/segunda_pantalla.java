@@ -17,12 +17,6 @@ import android.widget.TextView;
 
 public class segunda_pantalla extends AppCompatActivity{
 
-    //private Button btn_Enviar;
-    //private TextView informacion;
-
-
-//final Context context=this;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,19 +26,8 @@ public class segunda_pantalla extends AppCompatActivity{
         final RadioGroup rgTiposdeEmergencia = (RadioGroup)findViewById(R.id.radioGroup2);
         final RadioGroup rgNumeroPacientes = (RadioGroup)findViewById(R.id.radioGroup);
 
-        RadioButton rbquemaduras = (RadioButton)findViewById(R.id.rbquemadura);
-        RadioButton rbcardiaco  =(RadioButton)findViewById(R.id.rb_cardio);
-        RadioButton rbtransito =(RadioButton)findViewById(R.id.rb_accidente);
-        RadioButton rbuno =  (RadioButton)findViewById(R.id.rb_Uno);
-        RadioButton rbdos= (RadioButton)findViewById(R.id.rb_Dos);
-        RadioButton rbtres= (RadioButton)findViewById(R.id.rb_Tres);
-        RadioButton rbmultiples  = (RadioButton)findViewById(R.id.rb_Multiples);
-        Button btn_Enviar=(Button)findViewById(R.id.btn_Enviar);
+        Button btn_Enviar=(Button)findViewById(R.id.btn_Enviar);                //Referencia al objeto boton Enviar
         final TextView informacion=(TextView)findViewById(R.id.textView3);
-
-
-
-
 
 
         /*

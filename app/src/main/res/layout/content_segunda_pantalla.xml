@@ -108,6 +108,16 @@
             android:id="@+id/rb_Tres"
             android:checked="false" />
 
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/st_Multiples"
+            android:id="@+id/rb_Multiples"
+            android:checked="false"
+            android:layout_below="@+id/radioGroup"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
     </RadioGroup>
 
     <TextView
@@ -118,15 +128,5 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="52dp" />
-
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/st_Multiples"
-        android:id="@+id/rb_Multiples"
-        android:checked="false"
-        android:layout_below="@+id/radioGroup"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
